@@ -1,12 +1,36 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://market-assets.strapi.io',
+            'https://res.cloudinary.com', // Dominio de Cloudinary
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://res.cloudinary.com', // Para videos también
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:5173',"https://danleoropa.com"], // Cambia el puerto si usas otro en SvelteKit
+      origin: ['http://localhost:5173',"https://danleoropa.com"],
       methods: ['GET'],
       headers: ['Content-Type', 'Authorization'],
       credentials: false,
