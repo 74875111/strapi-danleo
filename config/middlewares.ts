@@ -15,12 +15,6 @@ export default [
             'https://market-assets.strapi.io',
             'https://res.cloudinary.com', // Dominio de Cloudinary
           ],
-          'media-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'https://res.cloudinary.com', // Para videos también
-          ],
           upgradeInsecureRequests: null,
         },
       },
