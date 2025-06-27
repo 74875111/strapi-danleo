@@ -6,7 +6,7 @@ export default [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:5173',"https://danleoropa.com/"], // Cambia el puerto si usas otro en SvelteKit
+      origin: ['http://localhost:5173',"https://danleoropa.com"], // Cambia el puerto si usas otro en SvelteKit
       methods: ['GET'],
       headers: '*',
     },
