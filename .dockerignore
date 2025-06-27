@@ -1,0 +1,20 @@
+# Node modules y cachés
+node_modules
+.cache
+.tmp
+dist
+
+# Archivos sensibles o grandes
+.env
+.env.example
+database
+data
+scripts/uploads
+uploads
+public/uploads
+
+# Archivos de control
+.git
+*.log
+.vscode
+*.DS_Store
