@@ -8,7 +8,8 @@ export default [
       enabled: true,
       origin: ['http://localhost:5173',"https://danleoropa.com"], // Cambia el puerto si usas otro en SvelteKit
       methods: ['GET'],
-      headers: '*',
+      headers: ['Content-Type', 'Authorization'],
+      credentials: false,
     },
   },
   'strapi::poweredBy',
